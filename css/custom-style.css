@@ -188,6 +188,25 @@ a.article, a.article:hover {
     margin: 5px auto;
 }
 
+#btn-menu {
+    display: none;
+}
+
+header { 
+        width: 100%
+}
+
+header label { 
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+header label:hover {
+    cursor: pointer;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -220,5 +239,19 @@ a.article, a.article:hover {
     #sidebarCollapse.active span:last-of-type {
         transform: rotate(-45deg) translate(1px, -1px);
     }
+    header label { display: block; }
+    .menu { 
+        position: absolute;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.2s;
+      }
+    .menu ul { 
+        flex-direction: column;
+     }
+
+     #btn-menu:checked ~ .menu  {
+        margin: 0;
+     }
 
 }
